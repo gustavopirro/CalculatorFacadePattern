@@ -12,7 +12,7 @@ class AverageCalculatorController:
             data = [r1, r2, new_arr[2]]
             response = MathLibInterface().average(data)
             
-            return self.__format_response(response)
+            return self.__format_response(response, number)
         except:
             return { 'success': False, 'data': 'An error has ocurred' }
 
@@ -26,6 +26,6 @@ class AverageCalculatorController:
     def __process_second_input(self, input:float):
         return (math.pow(input, 2.121)/5)+1
     
-    def __format_response(self, response):
-        return {'success': True, 'data': response['data'] } 
+    def __format_response(self, response, initial_input):
+        return {'success': True, 'data': response['data'], 'initial_input': initial_input, 'calculator': 'AverageCalculatorController'} 
     
