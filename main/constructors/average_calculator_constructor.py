@@ -10,6 +10,8 @@ def average_calculator_process():
     response = avg_calc_controller.get_average(initial_number_input)
 
     if response['success']:
-        print(f"Resultado: { response['data'] }, Input Inicial: { response['initial_input']}, Calculadora: { response['calculator'] }")
+        print(f"Resultado: { response['data'] }")
+        print(f"Input Inicial: { response['initial_input']}")
+        print(f"Calculadora: { response['calculator'] }")
     else:
-        print(f'Ocorreu um erro ao processar a resposta.')
+        print('Ocorreu um erro ao processar a resposta.')
