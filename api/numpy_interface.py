@@ -7,9 +7,9 @@ class MathLibInterface:
         return result
     
     def variation(self, numbers_array: list):
-        result = _np.average(numbers_array)
+        result = _np.var(numbers_array)
         return result
     
     def standard_deviation(self, numbers_array: list):
-        result = _np.average(numbers_array)
+        result = _np.std(numbers_array)
         return result
