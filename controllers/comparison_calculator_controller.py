@@ -22,12 +22,12 @@ class ComparisonCalculatorController:
         return arr_standard_deviation
     
     def _data_comparison(self, variation_data, standard_deviation_data):
-        return variation_data < standard_deviation_data
+        return variation_data > standard_deviation_data
 
     def _format_response(self, variation_is_gt_standard_deviation):
         if variation_is_gt_standard_deviation:
-            return {'success': True, 'data': "Variation is greater than average!"}
-        return {'success': False, 'data': "The comparison failed, variation must be greater than standard deviation!"}
+            return {'success': True, 'data': "Success! Variation is greater than average!"}
+        return {'success': False, 'data': "The comparison failed... Variation must be greater than standard deviation!"}
 
 
 
