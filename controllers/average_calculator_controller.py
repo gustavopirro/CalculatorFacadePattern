@@ -27,5 +27,5 @@ class AverageCalculatorController:
         return (math.pow(input, 2.121)/5)+1
     
     def __format_response(self, response, initial_input):
-        return {'success': True, 'data': response['data'], 'initial_input': initial_input, 'calculator': 'AverageCalculatorController'} 
+        return {'success': True, 'data': response, 'initial_input': initial_input, 'calculator': 'AverageCalculatorController'} 
     
