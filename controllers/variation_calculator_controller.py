@@ -1,9 +1,10 @@
 from api.numpy_interface import MathLibInterface
+from controllers.interface.calculator_interface import CalculatorInterface
 import math
 
-class VariationCalculatorController:
+class VariationCalculatorController(CalculatorInterface):
     
-    def get_variation(self, arr_data: float):
+    def calculate(self, arr_data: float):
         try:
             new_array = self._create_array(arr_data)
             variation_data = self._apply_variation(new_array)

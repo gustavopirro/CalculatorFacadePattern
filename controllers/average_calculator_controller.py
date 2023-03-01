@@ -1,9 +1,10 @@
 import math
+from controllers.interface.calculator_interface import CalculatorInterface
 from api.numpy_interface import MathLibInterface
 
-class AverageCalculatorController:
+class AverageCalculatorController(CalculatorInterface):
 
-    def get_average(self, number: float):
+    def calculate(self, number: float):
         try:
             new_arr = self.__create_array(number)
             r1 = self.__process_first_input(new_arr[0])

@@ -1,4 +1,4 @@
-from main.start_app import start_process
+from server.server import app
 
-if __name__ == '__main__':
-    start_process()
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5007)

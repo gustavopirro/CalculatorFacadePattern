@@ -1,9 +1,10 @@
 from api.numpy_interface import MathLibInterface
+from controllers.interface.calculator_interface import CalculatorInterface
 import math
 
-class ComparisonCalculatorController:
+class ComparisonCalculatorController(CalculatorInterface):
     
-    def get_comparison(self, arr_data: float):
+    def calculate(self, arr_data: float):
         variation_data = self._get_variation(arr_data)
         standard_deviation_data = self._get_standard_deviation(arr_data)
         result = self._data_comparison(variation_data, standard_deviation_data)
